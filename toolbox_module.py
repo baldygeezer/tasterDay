@@ -11,3 +11,6 @@ def count_values(df: pd.DataFrame,value):
             print(col, df[col][df[col] == value].count())
 
 
+def count_value(df:pd.DataFrame, value):
+    if df[col].dtype == object:
+        print(col, df[col][df[col] == value].count())
