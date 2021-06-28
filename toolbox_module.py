@@ -27,7 +27,7 @@ def convert_idc_disease_class(value):
     #  this is a dict with the possible return codes
     classes = {'circulatory': 1, 'respiratory': 2, 'digestive': 3, 'diabetes': 4, 'injury': 5, 'musculoskeletal': 6,
                'genitourinary': 7, 'neoplasm': 8, 'other': 9}
-    idc=0
+    idc = 0
 
     # if its a non numeric character then ist either a diabetes code eg 250.6 or an injury code with a V or E suffix
     if not value.isnumeric():
@@ -37,6 +37,7 @@ def convert_idc_disease_class(value):
             if idc != 250:   # if it has another number then its 'other'
                 disease_class="other"
                 return classes.get(disease_class)  # in which case, we're done, nothing else to see here
+
     else:  # if it's another code
         idc = int(value) # make it an int
 
@@ -51,7 +52,7 @@ def convert_idc_disease_class(value):
         disease_class = 'diabetes'
     elif idc in range(800, 1000):
         disease_class = 'injury'
-    elif idc in range(710,630):
+    elif idc in range(710, 740):
         disease_class = 'musculoskeletal'
     elif (idc in range(580, 660)) or idc == 788:
         disease_class = 'genitourinary'
@@ -60,25 +61,8 @@ def convert_idc_disease_class(value):
     else:
         disease_class = 'other'
 
-    #  look up the dict for the code
+    #  look up the dict for the code and return it
     return classes.get(disease_class)
 
 
-# classes={'circulatory':2, 'respiratory':3, 'digestive' : 1,'diabetes':4, 'injury':5, 'musculoskeletal':6, 'genitourinary': 7,'neoplasm':8, 'other':9}
-# print(classes.get('digestive'))
-print (convert_idc_disease_class('34v'))
-print (convert_idc_disease_class('390'))
-print (convert_idc_disease_class('432'))
-print (convert_idc_disease_class('459'))
-print (convert_idc_disease_class('460'))
-print(convert_idc_disease_class('250.03'))
-print('*********************************************************')
-print (convert_idc_disease_class_11('34v'))
-print (convert_idc_disease_class_11('390'))
-print (convert_idc_disease_class_11('432'))
-print (convert_idc_disease_class_11('459'))
-print (convert_idc_disease_class_11('460'))
-print(convert_idc_disease_class_11('250.03'))
 
-# print (convert_idc_disease_class('390'))
-# print (convert_idc_disease_class_11('390'))
