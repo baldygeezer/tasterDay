@@ -1,0 +1,14 @@
+[![black](https://img.shields.io/badge/code%20style-black-000000.svg?style=plastic)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?color=g&style=plastic)](https://opensource.org/licenses/MIT)
+
+## Background
+
+Diabetes is a group of metabolic disorders characterised by prolonged high blood sugar levels. Untreated diabetes can cause severe health problems and the world health organisation has recognised it as a leading cause of death. It affects 425 million people worldwide, mostly in more developed countries in Europe and the Americas, although some of the fastest rates of increase are occurring in low and middle-income countries in Asia and Africa. Type II diabetes is the most common form, accounting for 85 to 90% of all cases worldwide. Some of the most common risk factors include excess weight, poor diet, physical inactivity, and tobacco use.
+The medical term for high blood sugar levels is hyperglycaemia and in severe cases this requires hospital treatment. When this treatment is successful a patient is not likely to require further hospital treatment in the near future however sometimes patients are discharged and then relapse and have to be readmitted. When this happens the long-term outcome for the patient is much worse than if they had remained in hospital for a longer period and the cost of care is very much greater. Because of this it is very important to identify factors which may lead to a relapse. Being able to predict hospital readmissions helps to improve the quality and cost of healthcare.
+We have access to a medical claims dataset from the US which has a lot of data about patients admitted to hospital with hyperglycaemia, as well as whether or not that patient was readmitted later on. Your task as a data scientist is to answer these questions:
+
+1.	What factors are the strongest predictors of hospital readmission in diabetic patients?
+2.	How well can we predict hospital readmission in this dataset?
+3.	What are the ethical implications of using AI to make decisions using this data?
+
+<details about the notebooks - which one to open etc>
