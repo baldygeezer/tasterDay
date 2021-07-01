@@ -133,3 +133,4 @@ dmypy.json
 .DS_Store
 .idea
 .ipynb_checkpoints
+catboost_info
